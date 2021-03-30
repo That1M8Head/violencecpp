@@ -1,2 +1,2 @@
-# violence
-Get violent with your terminal.
+# `violence`
+Command line utility that implies sudo for every following command.
