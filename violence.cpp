@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
     violence = true;
 	while (violence)
 	{
-		cout << "violence> ";
+		cout << "👊 ~ ";
 		getline(cin, command);
 		if (command == "exit" || command == "quit")
 		{
