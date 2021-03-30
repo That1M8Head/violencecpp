@@ -8,8 +8,7 @@ int main()
 {
 	// variable stuff
 	bool violence;
-	string command;
-	string sudoas;
+	string command, sudoas, violentcmd;
 	violence = true;
 	sudoas = "doas";
 	
@@ -28,9 +27,9 @@ int main()
 		{
 			sudoas = "sudo";
 		}
+        sudo.close();
 	}
 	doas.close();
-	sudo.close();
 	
 	// main loop
 	cout << "Violence ENABLED." << endl;
@@ -46,7 +45,7 @@ int main()
 		{
 			violentcmd = sudoas + " " + command; // for example: doas apt install some-package
 			cout << violentcmd << endl;
-			system(violentcmd);
+			system(violentcmd.c_str());
 		}
 	}
 	cout << "Violence DISABLED." << endl;
