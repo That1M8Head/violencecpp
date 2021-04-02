@@ -25,13 +25,13 @@ int main(int argc, char *argv[])
     }
 	
 	// check if the system has doas or sudo (in that order)
-	ifstream doas("sudo");
+	ifstream doas("/usr/local/bin/doas");
     if (sudoascheck)
     {
         if (!doas)
         {
             cout << "doas not found -- falling back to sudo" << endl;
-            ifstream sudo("sudo");
+            ifstream sudo("/usr/bin/sudo");
             if (!sudo)
             {
                 cout << "sudo not found -- program terminated" << endl;
